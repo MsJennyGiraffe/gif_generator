@@ -1,3 +1,12 @@
-<h1><%= @category.name %></h1>
+<h1 class="text-center"><%= @category.name.capitalize %></h1>
 
-<%= link_to "Back to Category Index", categories_path %>
+<% @gifs.each do |gif| %>
+  <div class="col-md-3">
+    <iframe src=<%= gif.image_path %></iframe>
+  </div>
+<% end %>
+
+<div class="col-md-8 col-md-offset-2">
+  <br><br>
+  <%= link_to "Back to Category Index", categories_path, class:"btn btn-default btn-block" %>
+</div>

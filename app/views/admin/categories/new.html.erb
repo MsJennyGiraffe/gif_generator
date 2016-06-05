@@ -1,8 +1,17 @@
-<h1>Create a Category</h1>
+<h1 class="text-center">Create a Category</h1>
+
+<br>
 
 <%= form_for [:admin, @category] do |f| %>
+<div class="text-center">
   <%= f.label :name %>
+  <br>
   <%= f.text_field :name %>
+</div>
 
-  <%= f.submit %>
+<br><br>
+
+<div class="col-md-8 col-md-offset-2">
+  <%= f.submit class:"btn btn-block btn-default" %>
+</div>
 <% end %>

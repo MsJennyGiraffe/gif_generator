@@ -1,3 +1,4 @@
+
 require 'rails_helper'
 
 RSpec.feature "admin can generate gif" do
@@ -12,7 +13,6 @@ RSpec.feature "admin can generate gif" do
     click_button "Generate Gif"
 
     expect(current_path).to eq(gifs_path)
-    save_and_open_page
     expect(page).to have_content("Gif Successfully Generated!")
     expect(page).to have_content("Puppies")
   end
