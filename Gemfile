@@ -17,6 +17,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
+  gem 'mocha'
 end
 
 group :development do
