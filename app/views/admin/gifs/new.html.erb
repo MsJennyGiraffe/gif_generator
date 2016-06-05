@@ -1,0 +1,9 @@
+<h1>Create a Gif</h1>
+
+<%= form_for [:admin, @gif] do |f| %>
+  <% @categories.each do |category| %>
+    <%= radio_button_tag(:category, "#{category.name}") %>
+    <%= f.label(:category, "#{category.name}") %>
+  <% end %>
+  <%= f.submit "Generate Gif" %>
+<% end %>

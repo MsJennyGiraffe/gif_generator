@@ -1,3 +1,6 @@
+<h1>All Gifs</h1>
+
 <% @gifs.each do |gif| %>
-  <%= gif.image_path %>
+  <p>Category: <%= gif.category.name %></p>
+  <iframe src="<%= gif.image_path %>">
 <% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160605004516) do
+ActiveRecord::Schema.define(version: 20160605184941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,9 +24,12 @@ ActiveRecord::Schema.define(version: 20160605004516) do
 
   create_table "gifs", force: :cascade do |t|
     t.string   "image_path"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "category_id"
   end
+
+  add_index "gifs", ["category_id"], name: "index_gifs_on_category_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
@@ -36,4 +39,5 @@ ActiveRecord::Schema.define(version: 20160605004516) do
     t.integer  "role",            default: 0
   end
 
+  add_foreign_key "gifs", "categories"
 end
