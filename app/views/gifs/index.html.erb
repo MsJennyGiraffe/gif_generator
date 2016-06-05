@@ -1,6 +1,14 @@
-<h1>All Gifs</h1>
+<h1 class="text-center">All Gifs</h1>
+
+<% if current_user && current_user.admin? %>
+  <%= link_to "Create Gif", new_admin_gif_path, class:"btn btn-default btn-block" %>
+<% end %>
+
+<br>
 
 <% @gifs.each do |gif| %>
+<div class="col-md-4">
   <p>Category: <%= gif.category.name %></p>
-  <iframe src="<%= gif.image_path %>">
+  <iframe src="<%= gif.image_path %>"></iframe>
+</div>
 <% end %>
