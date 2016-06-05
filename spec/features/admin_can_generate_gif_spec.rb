@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.feature "admin can generate gif" do

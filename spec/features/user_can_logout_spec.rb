@@ -9,10 +9,10 @@ RSpec.feature "user can logout" do
     fill_in "Password", with: "password"
     click_button "Sign In"
 
-    expect(page).to have_content("Welcome, jenny.")
+    expect(page).to have_content("Welcome, Jenny.")
 
     click_link "Logout"
 
-    expect(page).to_not have_content("Welcome, jenny.")
+    expect(page).to_not have_content("Welcome, Jenny.")
   end
 end

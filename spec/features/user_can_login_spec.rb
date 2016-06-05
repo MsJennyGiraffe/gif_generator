@@ -11,6 +11,6 @@ RSpec.feature "an existing user can login" do
     fill_in "Password", with: "password"
     click_button "Sign In"
 
-    expect(page).to have_content("Welcome, jenny.")
+    expect(page).to have_content("Welcome, Jenny.")
   end
 end
