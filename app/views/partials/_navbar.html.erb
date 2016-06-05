@@ -1,0 +1,16 @@
+<nav class="navbar navbar-default">
+    <div class="collapse navbar-collapse" >
+      <a class="navbar-brand" href="/">Home</a>
+      <ul class="nav navbar-nav navbar-right">
+
+  <% if current_user %>
+        <li> <%= link_to "Logout", logout_path, method: :delete %> </li>
+        <li><a>Welcome, <%= current_user.username %>.</a></li>
+
+      <% else %>
+        <li><%= link_to "Sign In", login_path %></li>
+        <li><%= link_to "Create Account", new_user_path %></li>
+  <% end %>
+    </ul>
+  </div>
+</nav>
