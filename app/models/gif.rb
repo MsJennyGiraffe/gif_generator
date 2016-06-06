@@ -1,5 +1,4 @@
 class Gif < ActiveRecord::Base
-
   belongs_to :category
 
   def get_giffy(search_word)

@@ -12,7 +12,6 @@ RSpec.feature "Admin can delete a category" do
     expect(page).to have_content("kittens")
 
     click_link "puppies"
- save_and_open_page
 
     click_link "Delete"
 
