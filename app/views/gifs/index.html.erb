@@ -10,5 +10,6 @@
 <div class="col-md-4">
   <p>Category: <%= gif.category.name %></p>
   <iframe src="<%= gif.image_path %>"></iframe>
+  <%= link_to "Favorite", users_favorite_path(current_user), class:"btn btn-block btn-default" %>
 </div>
 <% end %>

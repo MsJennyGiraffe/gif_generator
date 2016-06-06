@@ -9,6 +9,10 @@ class Admin::CategoriesController < Admin::BaseController
     redirect_to category_path(@category)
   end
 
+  def destroy
+
+  end
+
   private
 
   def category_params
