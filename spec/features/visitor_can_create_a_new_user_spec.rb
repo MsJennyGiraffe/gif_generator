@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "can create a new user" do
+RSpec.feature "visitor can create a new user" do
   scenario "a new user can be created" do
     visit root_path
     click_link "Create Account"
@@ -9,6 +9,8 @@ RSpec.feature "can create a new user" do
     fill_in "Password", with: "password"
     click_button "Create Account"
 
-    expect(page).to have_content("Welcome, Jenny.")
+    within(".navbar") do
+      expect(page).to have_content("Welcome, Jenny.")
+    end
   end
 end
